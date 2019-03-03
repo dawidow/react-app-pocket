@@ -1,0 +1,22 @@
+.wrapper {
+	width: 80%;
+	margin: 10px auto 0;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+
+	.logo {
+		width: 60px;
+	}
+
+	.container {
+		display: flex;
+		align-items: center;
+	}
+
+	@media (min-width: 768px) {
+		.logo {
+			width: 110px;
+		}
+	}
+}

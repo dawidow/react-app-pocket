@@ -9,9 +9,9 @@ const List = ({items}) => (
         {items.map(item => (
           <ListItem key={item.title} {...item} />
         ))}
-      </ul>  
+      </ul>
   ) : (
-    <h1 class={styles.noItems}>There's nothing here yet, please add some items! ❤️</h1>
+    <h1 className={styles.noItems}>There's nothing here yet, please add some items! ❤️</h1>
   )}
   </>
 );

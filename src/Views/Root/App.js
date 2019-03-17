@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import './App.css';
+import AppContext from '../../context';
 import { BrowserRouter, Route, Switch } from 'react-router-dom';
 import AboutView from '../AboutView/AboutView';
 import SitesView from '../SitesView/SitesView';
@@ -11,6 +12,24 @@ class App extends Component {
 		sites: [],
 		isModalOpen: false,
 	}
+
+	addItem = e => {
+		e.preventDefault();
+
+		const newItem = {
+			title: e.target[0].value,
+			link: e.target[1].value,
+			image: e.target[2].value,
+			description: e.target[3].value
+		}
+
+		this.setState(prevState => ({
+		//   [newItem.type]: [...prevState[newItem.type], newItem],
+			sites: [...prevState.sites, newItem]
+		}));
+
+		this.closeModal();
+	  };
 
 	openModal = () => {
 		this.setState({
@@ -26,18 +45,22 @@ class App extends Component {
 
 	render() {
 		const { isModalOpen } = this.state;
+		const contextElements = {
+			...this.state,
+			addItem: this.addItem
+		}
 
 		return (
-		<BrowserRouter>
-			<>
-				<Header openModalFn={this.openModal} />
-				<Switch>
-					<Route exact path="/" component={AboutView} />
-					<Route path="/sites" component={SitesView} />
-				</Switch>
-				{ isModalOpen && <Modal closeModalFn={this.closeModal} /> }
-			</>
-		</BrowserRouter>
+			<BrowserRouter>
+				<AppContext.Provider value={contextElements}>
+					<Header openModalFn={this.openModal} />
+					<Switch>
+						<Route exact path="/" component={AboutView} />
+						<Route path="/sites" component={SitesView} />
+					</Switch>
+					{ isModalOpen && <Modal closeModalFn={this.closeModal} /> }
+				</AppContext.Provider>
+			</BrowserRouter>
 		);
 	}
 }

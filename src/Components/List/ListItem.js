@@ -9,18 +9,18 @@ const ListItem = ({ image, title, description, link }) => {
 
   return (
     <li className={styles.wrapper}>
-      {image && <ImageTag
+      <ImageTag
         src={image}
         className={image ? styles.image : styles.imageNone}
         alt={title}
-      />}
-      <div>
+      />
+      <div className={styles.wrapper__info}>
         <Title>{title}</Title>
         <p className={styles.description}>{description}</p>
         {link && <Button
           href={link}
         >
-          visit twitter page
+          visit saved site
         </Button>}
       </div>
     </li>
@@ -35,7 +35,7 @@ ListItem.propTypes = {
 };
 
 ListItem.defaultProps = {
-  image: null,
+  image: 'https://image.freepik.com/free-vector/blue-things-internet-background_23-2147639040.jpg',
   link: null,
 };
 

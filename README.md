@@ -10,6 +10,6 @@ _if you dont add an image, it will be replaced with random image. dont try to wr
 
 For test this app in your computer, download this application and use commands below for installing dependencies
 
-		npm install
-			or
-		yarn install
+	npm install
+		or
+	yarn install

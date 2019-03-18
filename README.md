@@ -6,4 +6,10 @@
 
 In this project i used: React, React Router, Context API, CSS Modules (SCSS)... and more!
 
-* if you dont add an image, it will be replaced with random image. dont try to write something different than link in image field. *
+_if you dont add an image, it will be replaced with random image. dont try to write something different than link in image field._
+
+For test this app in your computer, download this application and use commands below for installing dependencies
+
+		npm install
+			or
+		yarn install

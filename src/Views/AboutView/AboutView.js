@@ -10,7 +10,7 @@ const AboutView = () => (
 			<img className={styles.image} src={Image1} alt={Image1} />
 			<div className={styles.container}>
 				<h2>Welcome to your pocket for websites.</h2>
-				<p>Did you find an interesting site? Are you afraid of forgetting her? You better save it quickly in your pocket! Add links to interesting websites using the <span className={styles.strongText}>add item</span> button.</p>
+				<p>Did you find an interesting site? Are you afraid of forgetting her? You better save it quickly in your pocket! Add links to interesting websites using the <span className={styles.strongText}>new item</span> button.</p>
 			</div>
 		</div>
 

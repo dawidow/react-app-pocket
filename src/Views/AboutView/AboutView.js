@@ -26,7 +26,7 @@ const AboutView = () => (
 			<img className={styles.image} src={Image3} alt={Image1} />
 			<div className={styles.container}>
 				<h2>See how simple it is.</h2>
-				<p>Just click the <span className={styles.strongText}>add item</span> button, enter the title, link to the page, photo (optional) and description. Nothing more. You can now collect interesting links in our application.</p>
+				<p>Just click the <span className={styles.strongText}>new item</span> button, enter the title, link to the page, photo (optional) and description. Nothing more. You can now collect interesting links in our application.</p>
 			</div>
 		</div>
 	</>
